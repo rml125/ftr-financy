@@ -1,0 +1,45 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1.5px solid transparent;
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), opacity var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Outline */
+.outline {
+  border-color: var(--color-gray-300);
+  background: transparent;
+}
+.outline:hover:not(:disabled) {
+  border-color: var(--color-gray-500);
+  background: var(--color-gray-100);
+}
+
+.outline .icon {
+  opacity: 0.6;
+}
+.outline:hover:not(:disabled) .icon {
+  opacity: 1;
+}
+
+/* Danger */
+.danger {
+  border-color: var(--color-error);
+  background: transparent;
+}
+.danger:hover:not(:disabled) {
+  background: #fee2e2;
+}
+
+.danger .icon {
+  color: var(--color-error);
+}

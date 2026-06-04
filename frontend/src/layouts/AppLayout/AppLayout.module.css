@@ -1,0 +1,93 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  padding: 16px 48px;
+  gap: var(--space-6);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: inset 0 -1px 0 var(--color-gray-200);
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.navLogoText {
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-base);
+}
+
+.navLinks {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+}
+
+.navLink {
+  padding: var(--space-2) var(--space-4);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  color: var(--color-gray-600);
+  border-radius: var(--radius-md);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-brand-base);
+  background: rgba(31, 111, 67, 0.06);
+}
+
+.navLinkActive {
+  color: var(--color-brand-base);
+  font-weight: 600;
+}
+
+/* ── Avatar ── */
+.avatarBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--color-gray-300);
+  color: var(--color-gray-800);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.avatarBtn:hover {
+  background: var(--color-gray-400);
+}
+
+/* nav icons ficam com cor original no fundo claro */
+.navIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ── Main content ── */
+.main {
+  flex: 1;
+  background: var(--color-gray-100);
+  overflow-y: auto;
+}

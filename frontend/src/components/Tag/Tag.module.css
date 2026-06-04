@@ -1,0 +1,16 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.green  { background: #dcfce7; color: #15803d; }
+.blue   { background: #dbeafe; color: #1d4ed8; }
+.purple { background: #ede9fe; color: #7c3aed; }
+.red    { background: #fee2e2; color: #b91c1c; }
+.orange { background: #ffedd5; color: #c2410c; }
+.yellow { background: #fef9c3; color: #854d0e; }
+.gray   { background: var(--color-gray-100); color: var(--color-gray-600); }

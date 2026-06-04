@@ -1,0 +1,132 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* ── Label ── */
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-gray-700);
+  transition: color var(--transition-fast);
+}
+
+.labelError {
+  color: var(--color-error);
+}
+
+/* Filled — input tem valor, sem foco */
+.wrapper:has(.input:not(:placeholder-shown)):not(:focus-within) .label:not(.labelError) {
+  color: var(--color-gray-800);
+}
+
+/* Active — foco (sobrescreve filled) */
+.wrapper:focus-within .label:not(.labelError) {
+  color: var(--color-brand-base);
+}
+
+/* ── Input wrap (holds border) ── */
+.inputWrap {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  border: 1.5px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  transition: border-color var(--transition-fast);
+  overflow: hidden;
+}
+
+.inputWrap:focus-within {
+  border-color: var(--color-brand-base);
+}
+
+.inputWrapError {
+  border-color: var(--color-error) !important;
+}
+
+.inputWrapDisabled {
+  background: var(--color-gray-100);
+  border-color: var(--color-gray-200);
+}
+
+/* ── Icon ── */
+.inputIcon {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  flex-shrink: 0;
+  pointer-events: none;
+  color: var(--color-gray-400);
+  transition: color var(--transition-fast);
+}
+
+/* Filled — ícone gray-800 quando tem valor e sem foco */
+.wrapper:has(.input:not(:placeholder-shown)):not(:focus-within) .inputIcon {
+  color: var(--color-gray-800);
+}
+
+/* Active — ícone brand-base no foco */
+.inputWrap:focus-within .inputIcon {
+  color: var(--color-brand-base);
+}
+
+/* Erro — sempre sobrescreve */
+.inputWrapError .inputIcon {
+  color: var(--color-error) !important;
+}
+
+/* ── Input ── */
+.input {
+  flex: 1;
+  height: 48px;
+  padding: 0 var(--space-3);
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-800);
+  font-family: var(--font-family);
+  min-width: 0;
+}
+
+.input::placeholder {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-gray-400);
+}
+
+.input:disabled {
+  color: var(--color-gray-400);
+  cursor: not-allowed;
+}
+
+/* ── Right element (eye toggle, chevron, etc.) ── */
+.rightElement {
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+  flex-shrink: 0;
+}
+
+.rightElement button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.35;
+  transition: opacity var(--transition-fast);
+}
+.rightElement button:hover { opacity: 0.7; }
+
+/* ── Helper text ── */
+.helper {
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+}
+
+.helperHint {
+  color: var(--color-gray-500);
+}

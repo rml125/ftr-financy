@@ -1,0 +1,119 @@
+.card {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 24px;
+  height: 226px;
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.iconAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.deleteBtn,
+.editBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: 8px;
+  background: var(--color-white);
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.deleteBtn {
+  color: var(--color-error);
+}
+
+.deleteBtn:hover {
+  background: var(--color-error-light);
+  border-color: var(--color-error);
+}
+
+.editBtn {
+  color: var(--color-gray-500);
+}
+
+.editBtn:hover {
+  background: var(--color-gray-100);
+  border-color: var(--color-gray-400);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--color-gray-800);
+}
+
+.description {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-600);
+  line-height: 1.4;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.tag {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.count {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-600);
+  white-space: nowrap;
+}

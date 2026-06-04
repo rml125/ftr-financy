@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: var(--space-2);
+}
+
+.button {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  color: var(--color-gray-600);
+}
+
+.button:hover {
+  border-color: var(--color-brand-base);
+  background: var(--color-gray-100);
+}
+
+.active {
+  border-color: var(--color-brand-base);
+  border-width: 2px;
+}
